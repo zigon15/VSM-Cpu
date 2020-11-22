@@ -1,0 +1,22 @@
+#Visual Studio code workspaces
+*.code-workspace
+
+*.bin
+
+#ISE generated files
+CPU_Test/COE
+CPU_Test/ipcore_dir
+CPU_Test/WorkingDir
+CPU_Test/iseconfig
+CPU_Test/**/*.twx
+CPU_Test/**/*.svf
+CPU_Test/**/*.xml
+CPU_Test/**/*.xsvf
+CPU_Test/**/*.xsl
+CPU_Test/**/*.txt
+CPU_Test/**/*.debug
+CPU_Test/**/*.html
+CPU_Test/**/*.log
+CPU_Test/**/*.xwbt
+CPU_Test/**/*.ipf
+CPU_Test/**/*.sym

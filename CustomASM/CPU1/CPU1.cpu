@@ -1,0 +1,26 @@
+#cpudef "CPU1"{
+    #bits 16
+
+    NOP  			      -> 0b0000000000000000
+
+    ;register operations
+    LDA  {value} 	  -> 0b00001 @ 0b000 @ value[7:0]
+    LDB  {value}    -> 0b00010 @ 0b000 @ value[7:0]
+    LIA  {value}    -> 0b00011 @ value[10:0]
+    LIB  {value}    -> 0b00100 @ value[10:0]
+    LIC  {value}    -> 0b01111 @ value[10:0]
+    STA  {value}    -> 0b00101 @ 0b000 @ value[7:0]
+    STB  {value}    -> 0b00110 @ 0b000 @ value[7:0]
+    MOV  {value}    -> 0b01101 @ 0b00000000 @ value[2:0]
+
+    ;ALU operations
+    ADD  {value} 	  -> 0b00111 @ 0b000 @ value[7:0]
+    SUB  {value}   	-> 0b01000 @ 0b000 @ value[7:0]
+
+    ;branch operations
+    JMP   {value} 	-> 0b01001 @ 0b000 @ value[7:0]
+    JMPZ  {address} -> 0b01010 @ 0b000 @ address[7:0]
+    JMPL  {address} -> 0b01011 @ 0b000 @ address[7:0]
+    JMPG  {address} -> 0b01100 @ 0b000 @ address[7:0]
+
+}
